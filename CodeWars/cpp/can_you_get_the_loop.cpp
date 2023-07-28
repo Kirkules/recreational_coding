@@ -18,10 +18,8 @@
 //
 // Discussion:
 //
-// There's no way to avoid recording something about all the nodes in the linked list to see when you've
-// returned to one you saw before (closing the loop). The instructions don't give you anything about the
-// Node class except that they have a getNext() method, so all you have access to to record anyway is the
-// pointer to the Node.
+// The instructions don't give you anything about the Node class except that they have a getNext() method,
+// so all you have access to to record is the pointer to the Node.
 //
 // If we only record the node pointers seen, then we'll know when the loop is closed, but not how long it is.
 // In that case, we'd have to traverse the loop again and count how many steps we take. Since we're already
@@ -29,6 +27,12 @@
 // so I just recorded how many nodes we saw by the time we reached each Node pointer. Then, once the loop is
 // closed, you just have to subtract from the total node count the count at the Node you just returned to for
 // the loop size.
+//
+//
+// An alternative approach to mine which minimizes memory used is one where you traverse the tree with two
+// pointers simultaneously, one at twice the speed of the other, until they catch up with each other. For this
+// we need either to know the number of nodes in the linked list, or that there is a loop, or we need to decide
+// on a max number of iterations to explore with. Since we are promised there is a loop, this approach works.
 //
 #include <unordered_map>
 

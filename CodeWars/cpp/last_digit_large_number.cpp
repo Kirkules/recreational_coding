@@ -1,6 +1,6 @@
 // Author: Kirk Boyer
 //
-// My solution to www.codewars.com/kata/5511b2f550906349a70004e1/cpp authored by MysteriousMagenta.
+// My solution to www.codewars.com/kata/5511b2f550906349a70004e1/cpp authored by dburgoyne.
 //
 // Description:
 // -----------------------------------------------------------------------------------------
